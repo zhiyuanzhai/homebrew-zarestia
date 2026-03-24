@@ -14,7 +14,7 @@ cask "rclone-manager@0.2.3" do
   homepage "https://github.com/Zarestia-Dev/rclone-manager"
   depends_on macos: ">= :ventura" # macOS 13
   postflight do
-    system "xattr -cr com.apple.quarantine #{appdir}/RClone Manager.app"
+    system "/usr/bin/xattr", "-rd", "com.apple.quarantine", "#{appdir}/RClone Manager.app"
   end
   app "RClone Manager.app"
   zap trash: [

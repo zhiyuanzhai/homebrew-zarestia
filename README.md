@@ -1,59 +1,63 @@
-# RClone Manager Homebrew Tap
+# Zarestia's Homebrew Tap
 
-This repository contains the **Homebrew Cask** for installing **RClone Manager** on macOS.
-RClone Manager is an open-source GUI manager for RClone.
+This repository contains **Homebrew Casks** for various tools and applications developed by **Zarestia-Dev**.
 
 ---
 
-## 📦 Installation
+## 📦 Getting Started
 
 ### Step 1 – Tap the repository
 
+To add this tap to your Homebrew installation, run:
+
 ```bash
-brew tap RClone-Manager/homebrew-rclone-manager
+brew tap Zarestia-Dev/zarestia
 ```
 
-### Step 2 – Install the app
+### Step 2 – Install a tool
+
+You can then install any of the following available casks:
+
+#### **RClone Manager**
+A GUI manager for RClone built with Angular and Tauri.
 
 ```bash
 brew install --cask rclone-manager
 ```
 
-Homebrew will automatically install the correct version for **Intel** or **Apple Silicon (M1/M2)** Macs.
+---
+
+## 🛠 Available Casks
+
+| Cask | Description | Install Command |
+| :--- | :--- | :--- |
+| `rclone-manager` | GUI for RClone | `brew install --cask rclone-manager` |
 
 ---
 
 ## ⚠️ macOS Security Notice
 
-RClone Manager is **open-source and unsigned**.
-macOS may warn:
+Most applications in this tap are **open-source and unsigned**. macOS will likely block them by default with warnings like:
 
-> "RClone Manager.app" can't be opened because it is from an unidentified developer.
-> "RClone Manager.app" is damaged and can’t be opened.
+> "App" can't be opened because it is from an unidentified developer.
+> "App" is damaged and can’t be opened.
 
-This is **normal** — the app is not damaged.
+### ✅ How to bypass Gatekeeper
 
-### ✅ How to run it anyway
-
-**Option 1 – Right-click → Open**
-
-1. Go to `/Applications`.
-2. Right-click **RClone Manager.app** → **Open**.
-3. Confirm in the dialog.
-
-**Option 2 – Terminal (recommended for advanced users)**
+If you trust the application, you can allow it to run by running the following command in your terminal:
 
 ```bash
-xattr -rd com.apple.quarantine "/Applications/RClone Manager.app"
+# Example for RClone Manager
+xattr -cr "/Applications/RClone Manager.app"
 ```
 
-After this, the app will run normally.
+Alternatively, you can **Right-click** the application in `/Applications` and select **Open**, then confirm in the dialog.
 
 ---
 
-## 🔄 Updating
+## 🔄 Updating Tools
 
-When a new version is released:
+To update all installed tools from this tap to their latest versions:
 
 ```bash
 brew update
@@ -62,31 +66,8 @@ brew upgrade --cask rclone-manager
 
 ---
 
-## 🛠 Troubleshooting
+## 📌 Important Notes
 
-* If Homebrew says the cask is not found, make sure the tap is added:
-
-  ```bash
-  brew tap
-  ```
-
-  and check that `RClone-Manager/homebrew-rclone-manager` is listed.
-
-* If Gatekeeper still blocks the app, re-run the `xattr` command above.
-
----
-
-## 📌 Notes
-
-* This tap is **community-driven** and intended for hobby/open-source use.
-* App is **unsigned** and **not notarized** by Apple, so Gatekeeper warnings are expected.
-* Contributions, bug reports, and suggestions are welcome via the main [RClone Manager repo](https://github.com/RClone-Manager/rclone-manager).
-
----
-
-This README covers:
-
-* How to install
-* How to bypass Gatekeeper
-* Updating the app
-* Troubleshooting
+- This tap is community-driven and maintained by **Zarestia-Dev**.
+- Apps are unsigned and not notarized, so Gatekeeper warnings are expected.
+- Contributions and feedback are welcome!
