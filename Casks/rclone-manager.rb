@@ -3,11 +3,11 @@ cask "rclone-manager" do
   version "0.2.8"
   on_arm do
     url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_aarch64.dmg"
-    sha256 "c9a3d766c26f52df0d35699b9f3d31d8c7703c99c1efb6b5a161ae06d2c025db"
+    sha256 "7e560abb2628e058fa916be1bc4b4e434324bf2364687e0f1e64ee84ea14f6a0"
   end
   on_intel do
     url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_x64.dmg"
-    sha256 "30fc220b7ba2add09d1af47552ffc3742f4b4b9de42635bf0e139a436e57363c"
+    sha256 "4e4228631ded85bc955fcbc07dc322d89e6f41882a229ce188ae2af9cabf6f06"
   end
   name "RClone Manager"
   desc "GUI for rclone built with Angular and Tauri"
